@@ -1,11 +1,25 @@
-# Song Finder
-
 ![A file resolving into a waveform and then into frequency bands](https://raw.githubusercontent.com/songfinder-dev/songfinder/main/assets/hero.png)
+
+<div align="center">
+
+# Song Finder
 
 **Identify any song from a link or an audio file, then read its BPM, musical key and Camelot code — from your terminal or your code.**
 
-[![npm](https://img.shields.io/npm/v/songfinder)](https://www.npmjs.com/package/songfinder)
-[![license](https://img.shields.io/npm/l/songfinder)](./LICENSE)
+[![npm](https://img.shields.io/npm/v/songfinder?style=flat-square&color=0E1218&label=npm)](https://www.npmjs.com/package/songfinder)
+[![downloads](https://img.shields.io/npm/dm/songfinder?style=flat-square&color=0E1218)](https://www.npmjs.com/package/songfinder)
+[![License](https://img.shields.io/badge/license-MIT-0E1218?style=flat-square)](./LICENSE)
+[![Node](https://img.shields.io/badge/node-%E2%89%A5%2020-0E1218?style=flat-square)](https://nodejs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-strict-0E1218?style=flat-square)](./js/tsconfig.json)
+[![Dependencies](https://img.shields.io/badge/dependencies-0-00C470?style=flat-square)](./js/package.json)
+[![API key](https://img.shields.io/badge/API%20key-not%20required-00C470?style=flat-square)](https://songfinder.dev)
+[![Website](https://img.shields.io/badge/songfinder.dev-2155FF?style=flat-square)](https://songfinder.dev)
+
+**English** · [简体中文](./docs/README.zh-CN.md) · [日本語](./docs/README.ja.md) · [한국어](./docs/README.ko.md) · [Español](./docs/README.es.md) · [Deutsch](./docs/README.de.md) · [Français](./docs/README.fr.md)
+
+</div>
+
+---
 
 Official clients for [Song Finder](https://songfinder.dev), a free online **song finder** that identifies music from a file, a microphone recording or a link. No API key. No account. No rate card.
 

@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "songfinder-cli"
+version = "0.1.0"
+description = "Identify any song from a URL or audio file, then get its BPM, musical key, Camelot code and harmonically compatible tracks. CLI and client for the free Song Finder API — no API key, no dependencies."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [{ name = "Song Finder", email = "dev@songfinder.dev" }]
+keywords = [
+  "music-recognition",
+  "song-identification",
+  "song-finder",
+  "shazam-alternative",
+  "bpm-detection",
+  "key-detection",
+  "camelot-wheel",
+  "harmonic-mixing",
+  "audio-analysis",
+  "dj",
+  "playlist",
+  "isrc",
+  "music-metadata",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Sound/Audio :: Analysis",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+# 零运行时依赖是卖点，也是这个包不引 requests 而手写 multipart 的原因。
+dependencies = []
+
+[project.urls]
+Homepage = "https://songfinder.dev"
+Documentation = "https://github.com/songfinder-dev/songfinder#readme"
+Repository = "https://github.com/songfinder-dev/songfinder"
+Issues = "https://github.com/songfinder-dev/songfinder/issues"
+
+[project.scripts]
+songfinder = "songfinder_cli.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["songfinder_cli"]
+
+[tool.hatch.build.targets.sdist]
+include = ["songfinder_cli", "README.md", "LICENSE"]

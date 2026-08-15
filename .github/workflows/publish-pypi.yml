@@ -1,0 +1,58 @@
+# Publishes songfinder-cli to PyPI via Trusted Publishing (OIDC).
+#
+# No API token anywhere: PyPI verifies the workflow's OIDC identity against a
+# publisher you register once in the PyPI project settings. That means there is
+# no secret to leak, rotate, or accidentally commit.
+#
+# Trigger by pushing a tag: `git tag py-v0.1.0 && git push origin py-v0.1.0`
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - 'py-v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build
+        working-directory: python
+        run: |
+          python -m pip install --upgrade pip build
+          python -m build
+
+      # Catches the mistakes that PyPI rejects only at upload time — a broken
+      # README render, a missing classifier, a malformed metadata field.
+      - name: Check metadata
+        working-directory: python
+        run: |
+          python -m pip install twine
+          python -m twine check dist/*
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: python/dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      # Required for Trusted Publishing; without it PyPI has no identity to verify.
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+      - uses: pypa/gh-action-pypi-publish@release/v1
