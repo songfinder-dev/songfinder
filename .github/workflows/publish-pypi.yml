@@ -1,4 +1,4 @@
-# Publishes songfinder-cli to PyPI via Trusted Publishing (OIDC).
+# Publishes songfinderdev to PyPI via Trusted Publishing (OIDC).
 #
 # No API token anywhere: PyPI verifies the workflow's OIDC identity against a
 # publisher you register once in the PyPI project settings. That means there is
