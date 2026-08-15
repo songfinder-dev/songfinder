@@ -146,7 +146,7 @@ if (tempoDisagrees(detail)) {
 |---|---|
 | **[songfinder-mcp](https://github.com/songfinder-dev/songfinder-mcp)** | MCP 서버 — Claude, Cursor, Windsurf, Zed에서 같은 기능 |
 | **[songfinder-skills](https://github.com/songfinder-dev/songfinder-skills)** | Claude Code Agent Skills. curl 외에 설치할 것이 없습니다 |
-| **[songfinder.dev](https://songfinder.dev)** | 웹 앱: 파일·마이크·링크로 곡 식별, BPM／조성 검출, Camelot 휠, 오디오 트리밍 등 |
+| **[Song Finder — 무료 온라인 노래 검색](https://songfinder.dev)** | 웹 앱: 파일·마이크·링크로 곡 식별, BPM／조성 검출, Camelot 휠, 오디오 트리밍 등 |
 
 ---
 

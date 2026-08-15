@@ -146,7 +146,7 @@ Tout est entièrement typé. `SongFinderError` transporte le statut HTTP lorsqu'
 |---|---|
 | **[songfinder-mcp](https://github.com/songfinder-dev/songfinder-mcp)** | Serveur MCP — les mêmes capacités dans Claude, Cursor, Windsurf ou Zed |
 | **[songfinder-skills](https://github.com/songfinder-dev/songfinder-skills)** | Agent Skills Claude Code, sans rien installer d'autre que curl |
-| **[songfinder.dev](https://songfinder.dev)** | L'application web : identification par fichier, micro ou lien, plus détection BPM/tonalité, roue Camelot, découpe audio et davantage |
+| **[Song Finder — moteur de recherche de chansons gratuit](https://songfinder.dev)** | L'application web : identification par fichier, micro ou lien, plus détection BPM/tonalité, roue Camelot, découpe audio et davantage |
 
 ---
 

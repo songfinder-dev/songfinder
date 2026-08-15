@@ -136,7 +136,7 @@ Failures raise `SongFinderError`, which carries the HTTP status when there was o
 - **[songfinder](https://www.npmjs.com/package/songfinder)** — the same client and CLI for Node.js
 - **[songfinder-mcp](https://www.npmjs.com/package/songfinder-mcp)** — MCP server for Claude, Cursor, Windsurf and Zed
 - **[songfinder-skills](https://github.com/songfinder-dev/songfinder-skills)** — Agent Skills, installable with `npx skills add`
-- **[songfinder.dev](https://songfinder.dev)** — the web app, plus [BPM & key detection](https://songfinder.dev/tools/song-bpm-key), a [similar-songs finder](https://songfinder.dev/tools/similar-songs) and more
+- **[Song Finder — free online song finder](https://songfinder.dev)** — the web app, plus [BPM & key detection](https://songfinder.dev/tools/song-bpm-key), a [similar-songs finder](https://songfinder.dev/tools/similar-songs) and more
 
 ## License
 

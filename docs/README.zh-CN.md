@@ -146,7 +146,7 @@ if (tempoDisagrees(detail)) {
 |---|---|
 | **[songfinder-mcp](https://github.com/songfinder-dev/songfinder-mcp)** | MCP 服务器——在 Claude、Cursor、Windsurf 或 Zed 里使用同一套能力 |
 | **[songfinder-skills](https://github.com/songfinder-dev/songfinder-skills)** | Claude Code Agent Skills，除 curl 外无需安装任何东西 |
-| **[songfinder.dev](https://songfinder.dev)** | 网页版：按文件、麦克风或链接识别歌曲，另有 BPM／调性检测、Camelot 轮、音频裁剪等工具 |
+| **[Song Finder — 免费在线听歌识曲](https://songfinder.dev)** | 网页版：按文件、麦克风或链接识别歌曲，另有 BPM／调性检测、Camelot 轮、音频裁剪等工具 |
 
 ---
 

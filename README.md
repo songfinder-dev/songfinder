@@ -146,8 +146,8 @@ Everything is fully typed. `SongFinderError` carries the HTTP status when there 
 |---|---|
 | **[songfinder-mcp](https://github.com/songfinder-dev/songfinder-mcp)** | MCP server — the same capabilities inside Claude, Cursor, Windsurf or Zed |
 | **[songfinder-skills](https://github.com/songfinder-dev/songfinder-skills)** | Claude Code Agent Skills, no install beyond `curl` |
-| **[songfinder.dev](https://songfinder.dev)** | The web app: identify by file, microphone or link, plus BPM/key detection, a Camelot wheel, stem separation, audio trimming and more |
-| **[Browser extensions](https://songfinder.dev)** | Chrome, Edge, Firefox and a userscript |
+| **[Song Finder — free online song finder](https://songfinder.dev)** | The web app: identify by file, microphone or link, plus BPM/key detection, a Camelot wheel, stem separation, audio trimming and more |
+| **[Song finder browser extensions](https://songfinder.dev)** | Chrome, Edge, Firefox and a userscript |
 
 ---
 
