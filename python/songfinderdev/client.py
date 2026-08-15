@@ -44,7 +44,7 @@ CLIENT_VALUE = "cli"
 #: Cloudflare's bot rules reject outright — every request comes back 403 while
 #: the identical call from curl succeeds. Measured, not guessed: the only
 #: variable that changes the result is this header.
-USER_AGENT = "songfinder-cli/0.1.0 (+https://songfinder.dev)"
+USER_AGENT = "songfinderdev/0.1.0 (+https://songfinder.dev)"
 
 #: Matches the server-side cap. Checked locally so an oversized file fails
 #: immediately instead of after a pointless upload.

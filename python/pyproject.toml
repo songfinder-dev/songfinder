@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "songfinder-cli"
+name = "songfinderdev"
 version = "0.1.0"
 description = "Identify any song from a URL or audio file, then get its BPM, musical key, Camelot code and harmonically compatible tracks. CLI and client for the free Song Finder API — no API key, no dependencies."
 readme = "README.md"
@@ -51,10 +51,13 @@ Repository = "https://github.com/songfinder-dev/songfinder"
 Issues = "https://github.com/songfinder-dev/songfinder/issues"
 
 [project.scripts]
-songfinder = "songfinder_cli.cli:main"
+# 两个入口名：`songfinder` 是想要的那个，但 PyPI 上那个同名包很可能也占了这个
+# 命令，两者同装时后装的会覆盖前者。`songfinderdev` 作为不会被抢的退路。
+songfinder = "songfinderdev.cli:main"
+songfinderdev = "songfinderdev.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["songfinder_cli"]
+packages = ["songfinderdev"]
 
 [tool.hatch.build.targets.sdist]
-include = ["songfinder_cli", "README.md", "LICENSE"]
+include = ["songfinderdev", "README.md", "LICENSE"]

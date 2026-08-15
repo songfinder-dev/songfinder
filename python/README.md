@@ -1,9 +1,9 @@
-# songfinder-cli
+# songfinderdev
 
 **Identify any song from a link or an audio file, then read its BPM, musical key and Camelot code — from your terminal or your Python code.**
 
-[![PyPI](https://img.shields.io/pypi/v/songfinder-cli?style=flat-square&color=0E1218)](https://pypi.org/project/songfinder-cli/)
-[![Python](https://img.shields.io/pypi/pyversions/songfinder-cli?style=flat-square&color=0E1218)](https://pypi.org/project/songfinder-cli/)
+[![PyPI](https://img.shields.io/pypi/v/songfinderdev?style=flat-square&color=0E1218)](https://pypi.org/project/songfinderdev/)
+[![Python](https://img.shields.io/pypi/pyversions/songfinderdev?style=flat-square&color=0E1218)](https://pypi.org/project/songfinderdev/)
 [![License](https://img.shields.io/badge/license-MIT-0E1218?style=flat-square)](https://github.com/songfinder-dev/songfinder/blob/main/LICENSE)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-00C470?style=flat-square)](https://github.com/songfinder-dev/songfinder)
 [![API key](https://img.shields.io/badge/API%20key-not%20required-00C470?style=flat-square)](https://songfinder.dev)
@@ -17,14 +17,19 @@ The official Python client for [Song Finder](https://songfinder.dev), a free onl
 ## Install
 
 ```bash
-pip install songfinder-cli
+pip install songfinderdev
 ```
 
 Python 3.9+.
 
-> The distribution is `songfinder-cli` and the module is `songfinder_cli`. An
-> unrelated project already owns `songfinder` on PyPI, and sharing a top-level
-> module name would have the two installs silently overwrite each other.
+> **Why not `songfinder`?** An unrelated project already owns that name on
+> PyPI, and its wheel's top-level directory is `songfinder` too — sharing
+> either name would have the two installs silently overwrite each other.
+> `songfinder-cli` is not an option either: PyPI's similarity check strips
+> common suffixes like `cli`, `api` and `sdk` before comparing, so every such
+> variant collides as well. Hence `songfinderdev`, matching the domain.
+
+The command installs as both `songfinder` and `songfinderdev`, so it still works if something else on your `PATH` already claims the shorter name.
 
 ---
 
@@ -77,7 +82,7 @@ songfinder similar "strobe deadmau5" --harmonic --limit 5
 ## Library
 
 ```python
-from songfinder_cli import SongFinder, tempo_disagrees
+from songfinderdev import SongFinder, tempo_disagrees
 
 sf = SongFinder()
 

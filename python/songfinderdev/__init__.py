@@ -1,10 +1,13 @@
 """Song Finder — identify songs and read their BPM, key and Camelot code.
 
-The distribution is ``songfinder-cli`` and the module is ``songfinder_cli``:
-an unrelated ``songfinder`` project already owns both names on PyPI, and a
-top-level collision would have the two installs silently overwrite each other.
+Both the distribution and the module are ``songfinderdev``. An unrelated
+``songfinder`` project already owns that name on PyPI, and its wheel's
+top-level directory is ``songfinder`` — sharing either name would have the two
+installs silently overwrite each other. PyPI also rejects ``songfinder-cli``
+and friends outright: its similarity check strips common suffixes like ``cli``,
+``api`` and ``sdk`` before comparing, so every such variant collides too.
 
-    >>> from songfinder_cli import SongFinder
+    >>> from songfinderdev import SongFinder
     >>> sf = SongFinder()
     >>> sf.detail(sf.search("strobe deadmau5")[0]["isrc"])["features"]["key"]["camelot"]
     '10A'
