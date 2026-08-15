@@ -1,0 +1,61 @@
+{
+  "name": "songfinder",
+  "version": "0.1.0",
+  "description": "Identify any song from a URL or audio file, then get its BPM, musical key, Camelot code and harmonically compatible tracks. CLI and typed client for the free Song Finder API — zero dependencies, no API key.",
+  "keywords": [
+    "music-recognition",
+    "song-identification",
+    "song-finder",
+    "what-song-is-this",
+    "shazam-alternative",
+    "bpm-detection",
+    "key-detection",
+    "camelot-wheel",
+    "harmonic-mixing",
+    "audio-analysis",
+    "dj",
+    "playlist",
+    "isrc",
+    "music-metadata",
+    "cli"
+  ],
+  "homepage": "https://songfinder.dev",
+  "bugs": "https://github.com/songfinder-dev/songfinder/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songfinder-dev/songfinder.git",
+    "directory": "js"
+  },
+  "license": "MIT",
+  "author": "Song Finder (https://songfinder.dev)",
+  "type": "module",
+  "main": "./dist/client.js",
+  "types": "./dist/client.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    }
+  },
+  "bin": {
+    "songfinder": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/cli.js', 0o755)\"",
+    "typecheck": "tsc --noEmit",
+    "test": "node test/smoke.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}
